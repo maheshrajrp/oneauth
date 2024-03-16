@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: core
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${AUTH_ISSUER_URI}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+app:
+  core:
+    environment: ${CORE_ENVIRONMENT}

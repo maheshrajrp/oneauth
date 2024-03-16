@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/authcore
+    username: admin
+    password: admin
+    hikari:
+      connection-timeout: 250
+  jpa:
+    hibernate:
+      ddl-auto: create
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8085/realms/auth-core
+          jwk-set-uri: http://localhost:8085/realms/auth-core/protocol/openid-connect/certs
+app:
+  core:
+    environment: local
