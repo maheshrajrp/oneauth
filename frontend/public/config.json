@@ -1,0 +1,6 @@
+{
+    "authUrl": "http://localhost:8085",
+    "realm":"auth-core",
+    "apiBaseUrl": "http://localhost:8080",
+    "clientId": "ui-sso"
+}

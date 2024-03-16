@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  height: 100%;
+  @apply w-full h-full;
+}
+* {
+  box-sizing: border-box;
+  @apply antialiased;
+}
+html,
+body {
+  @apply h-full bg-black font-sans text-lightFont;
+}
+
+.gradient {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.p-sidebar-right .p-sidebar {
+  width: 28%;
+  @apply min-w-[15rem];
+  @apply bg-lightBg border-gray-50/25;
+}
+
+.p-sidebar-content {
+  @apply flex flex-col;
+}
