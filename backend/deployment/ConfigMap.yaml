@@ -12,3 +12,4 @@ data:
   CORE_ENVIRONMENT: dev
   CONTEXT_PATH: /api
   JPA_DDL_AUTO: update
+  ALLOWED_ORIGIN: https://oneauth.theiris.club

@@ -1,6 +1,6 @@
-# Simple OAuth Project
+# OneAuth Project
 
-This project serves as a template for setting up a Spring Boot application with OAuth2 resource server capabilities, along with a React user interface.
+This project is a Spring Boot application with OAuth2 resource server capabilities, along with a React user interface. It is protected by Keycloak acitng as the authorization server. The entirity of the application is hosted in Kubernetes and the necessary deployment yamls are stored within their respective folders. The running version of the application can be accessed [here](https://oneauth.theiris.club/).
 
 ## Description
 
@@ -17,7 +17,6 @@ The backend is a Spring Boot application configured with the following dependenc
 - Springdoc OpenAPI Starter WebMVC UI: Enables generation of OpenAPI documentation for RESTful APIs.
 - PostgreSQL Driver: Allows the application to interact with a PostgreSQL database.
 - Lombok: Provides annotations to reduce boilerplate code.
-- Rest Assured: Simplifies testing of RESTful APIs.
 - Testcontainers: Offers lightweight, throwaway instances of common databases for testing.
 - Spring Boot Starter Test: Includes testing utilities and dependencies for Spring Boot applications.
 - Spring Security Test: Provides testing utilities for Spring Security configurations.
@@ -32,6 +31,7 @@ The frontend is built using React, a popular JavaScript library for building use
 
 - JDK 17
 - Maven
+- Docker
 
 ### Frontend
 
@@ -43,8 +43,13 @@ The frontend is built using React, a popular JavaScript library for building use
 ### Backend
 
 1. Clone this repository.
-2. Configure your PostgreSQL database settings in `application.properties`.
-3. Build the project using Maven:
+2. Run `docker-compose up`
+3. Set active profile as `local` by setting up `SPRING_PROFILES_ACTIVE=local` in environment variables.
+4.
 
-```bash
-mvn clean install
+### UI
+
+1. You need to have the Backend running along with `docker-compose up`.
+2. Switch to the `frontend` folder.
+3. Run `npm install` to install UI dependencies.
+4. Run `npm run dev` to run application locally in port `3000`.
