@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: oneauth-core-cm
+  namespace: oneauth-core
+data:
+  AUTH_ISSUER_URI: https://oneauth.theiris.club/auth/realms/OneAuth
+  AUTH_JWK_SET_URI: https://oneauth.theiris.club/auth/realms/OneAuth/protocol/openid-connect/certs
+  DATASOURCE_URL: jdbc:postgresql://postgres.postgres.svc.cluster.local:5432/oneauth
+  DATASOURCE_USERNAME: admin
+  DATASOURCE_PASSWORD: admin
+  CORE_ENVIRONMENT: dev
+  CONTEXT_PATH: /api
+  JPA_DDL_AUTO: update

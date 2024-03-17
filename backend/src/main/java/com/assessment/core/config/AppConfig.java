@@ -9,7 +9,6 @@ public class AppConfig {
 
     @Bean
     public ObjectMapper objectMapper() {
-        ObjectMapper mapper = new ObjectMapper();
-        return mapper;
+        return new ObjectMapper();
     }
 }

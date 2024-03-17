@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oneauth-core
+  namespace: oneauth-core
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oneauth-core
+  template:
+    metadata:
+      labels:
+        app: oneauth-core
+    spec:
+      containers:
+        - name: oneauth-core
+          image: maheshrajrp/oneauth-core:alpha
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: oneauth-core-cm

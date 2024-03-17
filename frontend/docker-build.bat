@@ -1,0 +1,1 @@
+npm run build && docker build . -t maheshrajrp/oneauth-ui:alpha && docker push maheshrajrp/oneauth-ui:alpha

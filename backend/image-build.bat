@@ -1,0 +1,1 @@
+docker build . -t maheshrajrp/oneauth-core:alpha && docker push maheshrajrp/oneauth-core:alpha

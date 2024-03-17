@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: oneauth-core
+  namespace: oneauth-core
+  annotations:
+      cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - oneauth.theiris.club
+      secretName: oneauth-secret
+  rules:
+    - host: oneauth.theiris.club
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: oneauth-core
+                port:
+                  number: 80

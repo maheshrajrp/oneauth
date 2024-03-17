@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oneauth-ui-deployment
+  namespace: oneauth-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oneauth-ui
+  template:
+    metadata:
+      labels:
+        app: oneauth-ui
+    spec:
+      containers:
+        - name: oneauth-ui-container
+          image: maheshrajrp/oneauth-ui:alpha
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: config-volume
+              mountPath: /usr/local/tomcat/webapps/ROOT/config.json
+              subPath: config.json
+      volumes:
+        - name: config-volume
+          configMap:
+            name: oneauth-ui-cm

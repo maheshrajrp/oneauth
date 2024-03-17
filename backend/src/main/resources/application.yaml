@@ -1,4 +1,14 @@
+server:
+  servlet:
+    context-path: ${CONTEXT_PATH}
 spring:
+  datasource:
+    url: ${DATASOURCE_URL}
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: ${JPA_DDL_AUTO}
   application:
     name: core
   security:
@@ -6,7 +16,7 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: ${AUTH_ISSUER_URI}
-
+          jwk-set-uri: ${AUTH_JWK_SET_URI}
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
