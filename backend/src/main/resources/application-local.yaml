@@ -18,3 +18,4 @@ spring:
 app:
   core:
     environment: local
+    origin: http://localhost:3000

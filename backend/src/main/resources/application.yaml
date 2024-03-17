@@ -23,3 +23,4 @@ springdoc:
 app:
   core:
     environment: ${CORE_ENVIRONMENT}
+    origin: ${ALLOWED_ORIGIN}
