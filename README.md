@@ -47,7 +47,6 @@ The frontend is built using React, a popular JavaScript library for building use
 1. Clone this repository.
 2. Run `docker-compose up`
 3. Set active profile as `local` by setting up `SPRING_PROFILES_ACTIVE=local` in environment variables.
-4.
 
 ### UI
 
