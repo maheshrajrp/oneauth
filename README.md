@@ -57,3 +57,12 @@ The frontend is built using React, a popular JavaScript library for building use
 2. Switch to the `frontend` folder.
 3. Run `npm install` to install UI dependencies.
 4. Run `npm run dev` to run application locally in port `3000`.
+
+> :warning: Client credentials are subject to change, update your existing client credentials variable `client_secret` to match the one listed here if you face any issue.
+
+### Testing Out APIs
+1. Import PostMan Collection `oauth_token.postman_collection.json`
+2. Make sure `client_secret` collection variable is set to the latest one that is `TW5jxBuNWqAwvoRDqM6tEkIfxcEOuYmi`
+3. Make `Get OAuth Token` POST request, you would receive `access_token` in the response.
+4. Use this to test out OneAuth APIs listed in the Swagger [here](https://oneauth.theiris.club/api/swagger-ui/index.html).
+5. Follow the same method to fetch new token when the current one expires i.e. you receive 401 or 403 Exception.

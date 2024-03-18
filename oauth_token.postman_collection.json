@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "9c5c215c-dccb-436d-b4b7-69bf0b3e8c59",
+		"name": "Auth",
+		"description": "Getting OAuth Token for OneAuth Swagger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14711269"
+	},
+	"item": [
+		{
+			"name": "Get OAuth Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_secret",
+							"value": "{{client_secret}}",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "app",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://oneauth.theiris.club/auth/realms/OneAuth/protocol/openid-connect/token",
+					"protocol": "https",
+					"host": [
+						"oneauth",
+						"theiris",
+						"club"
+					],
+					"path": [
+						"auth",
+						"realms",
+						"OneAuth",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "client_secret",
+			"value": "TW5jxBuNWqAwvoRDqM6tEkIfxcEOuYmi",
+			"type": "string"
+		}
+	]
+}
