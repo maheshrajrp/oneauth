@@ -1,8 +1,11 @@
-# OneAuth Project
+# The OneAuth Project
 
 ![OneAuth Screenshot](/screenshots/oneauth-screenshot1.png)
 
 This project is a Spring Boot application with OAuth2 resource server capabilities, along with a React user interface. It is protected by Keycloak acting as the authorization server. The entirety of the application is hosted in Kubernetes, and the necessary deployment YAMLs are stored within their respective folders. The running version of the application can be accessed [here](https://oneauth.theiris.club/).
+
+
+> :warning: Be advised, OneAuth application may be subject to unexpected shutdowns at any given moment without prior notification. Contact [me](https://www.linkedin.com/in/maheshraj-r-p-37689b164/) for further information. 
 
 ## Description
 
