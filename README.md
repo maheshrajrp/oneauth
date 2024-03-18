@@ -58,9 +58,10 @@ The frontend is built using React, a popular JavaScript library for building use
 3. Run `npm install` to install UI dependencies.
 4. Run `npm run dev` to run application locally in port `3000`.
 
+### Testing Out APIs
+
 > :warning: Client credentials are subject to change, update your existing client credentials variable `client_secret` to match the one listed here if you face any issue.
 
-### Testing Out APIs
 1. Import PostMan Collection `oauth_token.postman_collection.json`
 2. Make sure `client_secret` collection variable is set to the latest one that is `TW5jxBuNWqAwvoRDqM6tEkIfxcEOuYmi`
 3. Make `Get OAuth Token` POST request, you would receive `access_token` in the response.
